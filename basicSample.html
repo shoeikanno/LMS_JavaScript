@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>確認課題01-JavaScriptの基礎構文</title>
+</head>
+<body>
+    <p>デベロッパーツールのコンソールで、実行結果を確認しましょう。</p>
+    <p>コードを書き換えた後はリロードを実施するようにして下さい。</p>
+    <!-- <script src="basic.js" type="text/javascript"></script> -->
+    <script>
+        // 1
+        let str1 = 'abc';
+        let str2 = 'defgh';
+        let num1 = 300;
+        let num2 = 3.14;
+        let flg = true;
+        console.log(str1);
+        console.log(str2);
+        console.log(num1);
+        console.log(num2);
+        console.log(flg);
+
+        // 2
+        let numbers = [1, 4, 7, 9];
+        numbers.push(20);
+        let members = ['太郎', '二郎', '花子'];
+        console.log(numbers.length);
+        console.log(members[2]);
+
+        // 3
+        let obj = {
+            name: null,
+            showName: function() {
+                return this.name;
+            }
+        }
+        obj.name = '花子';
+        console.log(obj.showName());
+    </script>
+</body>
+</html>
