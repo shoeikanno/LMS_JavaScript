@@ -10,33 +10,98 @@
     <!-- <script src="basic.js" type="text/javascript"></script> -->
     <script>
         // 1
-        let str1 = 'abc';
-        let str2 = 'defgh';
-        let num1 = 300;
-        let num2 = 3.14;
-        let flg = true;
-        console.log(str1);
-        console.log(str2);
-        console.log(num1);
-        console.log(num2);
-        console.log(flg);
+        // let str1 = 'abc';
+        // let str2 = 'defgh';
+        // let num1 = 300;
+        // let num2 = 3.14;
+        // let flg = true;
+        // console.log(str1);
+        // console.log(str2);
+        // console.log(num1);
+        // console.log(num2);
+        // console.log(flg);
 
         // 2
-        let numbers = [1, 4, 7, 9];
-        numbers.push(20);
-        let members = ['太郎', '二郎', '花子'];
-        console.log(numbers.length);
-        console.log(members[2]);
+        // let numbers = [1, 4, 7, 9];
+        // numbers.push(20);
+        // let members = ['太郎', '二郎', '花子'];
+        // console.log(numbers.length);
+        // console.log(members[2]);
 
         // 3
-        let obj = {
-            name: null,
-            showName: function() {
-                return this.name;
+        // let obj = {
+        //     name: null,
+        //     showName: function() {
+        //         return name;
+        //     }
+        // }
+        // obj.name = '花子';
+        // console.log(obj.showName());
+
+        // 4
+        // let num1 = 100;
+        // let num2 = 50;
+        // console.log(num1 + num2);
+        // console.log(num1 - num2);
+        // console.log(num1 * num2);
+        // console.log(num1 / num2);
+        // console.log(num1 % num2);
+
+        // 5
+        // let num1 = 5;
+        // let num2 = 5;
+        // let num3 = 3.89;
+        // console.log(num1 === num2);
+        // console.log(num1 !== num2);
+        // console.log(num1 < num3);
+        // console.log(num1 <= num2);
+        // console.log(num3 > num1);
+        // console.log(num2 >= num3);
+
+        // 6
+        // let num = 90;
+        // if (num === 100) {
+        //     console.log('値は100です');
+        // } else if (num >= 100) {
+        //     console.log('値は100以上です');
+        // } else {
+        //     console.log('値は100未満です');
+        // }
+
+        // 7
+        // for (let i = 0; i < 10; i ++) {
+        //     console.log(i + 1);
+        // }
+
+        // 8
+        // function helloWorld() {
+        //     console.log('Hello World!!');
+        // }
+        // helloWorld();
+
+        // 9
+        // function coupon(price) {
+        //     return price * 0.9;
+        // }
+        // let price = 140;
+        // let resultPrice = coupon(price);
+        // console.log(resultPrice + '円です。');
+
+        // 10
+        function createWord(count, word1, word2) {
+            let resultWord = '';
+            for (let i = 1; i <= count; i ++)
+            if (i % 2 != 0) {
+                resultWord += word1;
+            } else {
+                resultWord += word2;
             }
+            return resultWord;
         }
-        obj.name = '花子';
-        console.log(obj.showName());
+        let count = 5;
+        let word1 = 'abc';
+        let word2 = 'DEF';
+        console.log(createWord(count, word1, word2));
     </script>
 </body>
 </html>
