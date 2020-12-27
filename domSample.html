@@ -18,8 +18,70 @@
     </div>
     <!-- <script src="dom.js" type="text/javascript"></script> -->
     <script>
+        // 1
         let result = document.getElementById('result');
         console.log(result);
+
+        // 2
+        let paragraph = document.getElementsByTagName('p');
+        console.log(paragraph);
+
+        // 3
+        let h1 = document.getElementsByTagName('h1');
+        h1[0].textContent = 'h1が変更されました！！';
+
+        // 4
+        let main = document.getElementsByClassName('main');
+        main[0].style['background-color'] = 'lightgreen';
+        main[0].style.width = '300px';
+        main[0].style['text-align'] = 'center';
+
+        // 5
+        for (let i = 0; i < paragraph.length; i ++) {
+            paragraph[i].style.color = 'gray';
+            paragraph[i].style['font-size'] = '24px';
+            paragraph[i].style.padding = '10px';
+        }
+
+        // 6
+        let child = document.createElement('p');
+        child.textContent = 'resultに追加しました。';
+        result.appendChild(child);
+
+        // 7
+        let table = document.createElement('table');
+        result.appendChild(table);
+        let thead = document.createElement('thead');
+        table.appendChild(thead);
+        let tbody = document.createElement('tbody');
+        table.appendChild(tbody);
+
+        // 8
+        let tr1 = document.createElement('tr');
+        thead.appendChild(tr1);
+        let thTitle = ['名前', '出身地'];
+        for (let i = 0; i < thTitle.length; i ++) {
+            let th = document.createElement('th');
+            tr1.appendChild(th)[i];
+            th.textContent = thTitle[i];
+        }
+        let name = ['タロウ', '花子', 'サトシ'];
+        let birthPlace = ['東京', '千葉', '神奈川'];
+        for (let i = 0; i < name.length; i ++) {
+            let tr = document.createElement('tr');
+            tbody.appendChild(tr);
+            let td1 = document.createElement('td');
+            tr.appendChild(td1);
+            td1.textContent = name[i];
+            let td2 = document.createElement('td');
+            tr.appendChild(td2);
+            td2.textContent = birthPlace[i];
+        }
+
+        // 9
+        let remove = document.getElementById('remove');
+        remove.removeChild(remove.firstElementChild);
+
     </script>
 </body>
 </html>
